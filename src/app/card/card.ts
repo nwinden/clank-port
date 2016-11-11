@@ -2,26 +2,30 @@ export class Card {
 
      Name : String;
 
-    //  Effect : String[];
+     BannerColor: String;
 
-    //  Swords: Number;
+     Type: String;
 
-    //  Skill: Number;
+     Effect : String[];
 
-    //  Boots: Number;
+     Swords: Number;
 
-    //  VPTot: Number;
+     Skill: Number;
 
-    //  SkillCost: Number;
+     Boots: Number;
 
-    //  DragonAtkSmbl: Boolean;
+     VPTot: Number;
 
-    //  Aquire: String[];
+     SkillCost: Number;
 
-    //  Arrive: String[];
+     DragonAtkSmbl: Boolean;
 
-    //  Danger: String[];
+     Aquire: String[];
 
-    //  FlavorText: String;
+     Arrive: String[];
+
+     Danger: String[];
+
+     Hits: Number;
 
 }

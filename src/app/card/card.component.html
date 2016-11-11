@@ -1,3 +1,10 @@
-<p>
-  {{GameCard.Name}}
-</p>
+<div *ngFor="let card of Deck">
+  <p>{{card.Name}}</p>
+  <p *ngFor="let effect of card.Effect">{{effect}}</p>
+  <p>{{card.Swords}}</p>
+  <p>{{card.Skill}}</p>
+  <p>{{card.Boots}}</p>
+  <p>{{card.VPTot}}</p>
+  <p>{{card.SkillCost}}</p>
+  <p>{{card.DragonAtkSmbl}}</p>
+</div>
