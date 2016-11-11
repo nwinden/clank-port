@@ -2,9 +2,9 @@ export class Card {
 
      Name : String;
 
-     BannerColor: String;
+    //  BannerColor: String;
 
-     Type: String;
+    //  Type: String;
 
      Effect : String[];
 
@@ -20,12 +20,12 @@ export class Card {
 
      DragonAtkSmbl: Boolean;
 
-     Aquire: String[];
+    //  Aquire: String[];
 
-     Arrive: String[];
+    //  Arrive: String[];
 
-     Danger: String[];
+    //  Danger: String[];
 
-     Hits: Number;
+    //  Hits: Number;
 
 }
