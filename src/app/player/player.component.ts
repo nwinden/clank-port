@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Card } from '../card/card';
 
 @Component({
-  selector: 'app-player',
-  templateUrl: './player.component.html',
-  styleUrls: ['./player.component.css']
+    selector: 'app-player',
+    templateUrl: './player.component.html',
+    styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-    Deck : Card[] = [
+    Deck: Card[] = [
         {
             Name: 'Burgle',
             Effect: [],
@@ -117,14 +117,31 @@ export class PlayerComponent implements OnInit {
         }
     ];
 
-    Hand: Card[];
+    Hand: Card[] = [];
+    Discard: Card[] = [];
 
-    Draw(): Card[] {
+    draw(): void {
 
-      return this.Hand;
+        if (this.Hand.length != 0) {
+            this.Hand.forEach(card => {
+                this.Discard.push(card);
+            });
+            console.log(this.Discard);
+            this.Hand = [];
+        }
+
+        if (this.Deck.length >= 5) {
+            console.log('Working');
+            for (let i = 0; i < 5; i++) {
+                this.Hand.push(this.Deck.shift());
+            }
+            console.log(this.Hand);
+            console.log(this.Deck);
+        }
     }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.draw();
+    }
 
 }

@@ -1,10 +1,10 @@
-<div>
-  <p>{{card.Name}}</p>
-  <p *ngFor="let effect of card.Effect">{{effect}}</p>
-  <p>{{card.Swords}}</p>
-  <p>{{card.Skill}}</p>
-  <p>{{card.Boots}}</p>
-  <p>{{card.VPTot}}</p>
-  <p>{{card.SkillCost}}</p>
-  <p>{{card.DragonAtkSmbl}}</p>
+<div class="card">
+  <p>Name: {{card.Name}}</p>
+  <p *ngFor="let effect of card.Effect">Effect: {{effect}}</p>
+  <p>Swords: {{card.Swords}}</p>
+  <p>Skills: {{card.Skill}}</p>
+  <p>Boots: {{card.Boots}}</p>
+  <p>Victory Point Total: {{card.VPTot}}</p>
+  <p>Skill Cost Total: {{card.SkillCost}}</p>
+  <p>Dragon Attack: {{card.DragonAtkSmbl}}</p>
 </div>

@@ -1,3 +1,8 @@
-<div *ngFor="let card of Deck">
+
+<div>
+<div *ngFor="let card of Hand">
   <app-card [card]="card"></app-card>
+</div>
+
+<button (click)="draw()">Draw a Hand!</button>
 </div>
