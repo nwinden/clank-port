@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-
+var shuffle = require('./routes/shuffle');
 //middlewear
 
 app.use(express.static(path.join(__dirname, './client')));
@@ -16,6 +16,7 @@ app.listen(app.get('port'), function () {
 });
 
 //routes
+app.use('/shuffle', shuffle);
 
 //default index catch
 app.get('/', function (req, res) {

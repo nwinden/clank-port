@@ -122,13 +122,11 @@ export class PlayerComponent implements OnInit {
 
     draw(): void {
 
-        if (this.Hand.length != 0) {
-            this.Hand.forEach(card => {
-                this.Discard.push(card);
-            });
-            console.log(this.Discard);
-            this.Hand = [];
-        }
+        this.Hand.forEach(card => {
+            this.Discard.push(card);
+        });
+        console.log(this.Discard);
+        this.Hand = [];
 
         if (this.Deck.length >= 5) {
             console.log('Working');
